@@ -29,8 +29,8 @@ Each folder represents a weekly problem set aligned with the course topics.
 - [**pset7 – Regular Expressions**](./pset7/)  
   Validate and extract patterns (e.g., email, IP) using the `re` module.
 
-- [**pset8 – Object-Oriented Programming (OOP)**](./pset8/)  
+- [**pset8 – Object-Oriented Programming**](./pset8/)  
   Build classes, instantiate objects, and apply encapsulation principles.
 
-- [**pset9 – Et Cetera (Final Topics)**](./pset9/)  
+- [**pset9 – Et Cetera**](./pset9/)  
   Wrap-up topics including command-line arguments, packaging, and final practice.
