@@ -8,7 +8,7 @@ def get_artworks(query, limit):
             {"q": query, "limit": limit}
         )
         response.raise_for_status()
-    except request.HTTPError:
+    except requests.HTTPError:
         return []
 
     content = response.json()
