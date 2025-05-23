@@ -186,6 +186,7 @@ def draw(state):
     state["player"].draw(state["screen"])
     draw_score(state)
 
+
 def draw_title(state):
     screen = state["screen"]
     screen.blit(state["background_image"], (0, 0))
@@ -195,6 +196,7 @@ def draw_title(state):
     screen.blit(title, (CONFIG.width // 2 - title.get_width() // 2, CONFIG.height // 2 - 120))
     screen.blit(title2, (CONFIG.width // 2 - title2.get_width() // 2, CONFIG.height // 2 - 50))
     screen.blit(start, (CONFIG.width // 2 - start.get_width() // 2, CONFIG.height // 2 + 100))
+
 
 def draw_game_over(state):
     screen = state["screen"]
