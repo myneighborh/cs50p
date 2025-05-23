@@ -1,3 +1,5 @@
+![CS50P](https://github.com/user-attachments/assets/9e92eb4b-3afa-4dfe-be33-330fd6e4da8e)
+
 # CS50P
 
 This repository contains my solutions to Harvard's CS50P.  
