@@ -5,17 +5,20 @@ import pytest
 from seasons import parse_date, calculate_minutes, convert_to_words
 
 
+today = date.today()
+
+
 def test_valid_date():
-    assert parse_date("1990-03-03") == date(1990, 3, 3)
+    assert parse_date("1990-03-03", today) == date(1990, 3, 3)
 
 
 def test_invalid_date():
     with pytest.raises(ValueError):
-        parse_date("1990-03-41")
+        parse_date("1990-03-41", today)
     with pytest.raises(ValueError):
-        parse_date("2000/12/11")
+        parse_date("2000/12/11", today)
     with pytest.raises(ValueError):
-        parse_date("2000.12.11")
+        parse_date("2000.12.11", today)
 
 
 def test_calculate_minutes():

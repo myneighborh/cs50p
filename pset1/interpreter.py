@@ -1,11 +1,8 @@
 def main():
-    expression = input("Expression: ")
+    expression = input("Expression: ").strip()
     x, y, z = expression.split(' ')
     result = calculate(x, y, z)
-    if isinstance(result, str):
-        print(result)
-    else:
-        print(f"{result:.1f}")
+    print(f"{result:.1f}")
 
 
 def calculate(x, y, z):
@@ -20,10 +17,7 @@ def calculate(x, y, z):
         case '*':
             return float(x * z)
         case '/':
-            try:
-                return float(x / z)
-            except ZeroDivisionError:
-                return "Error"
+            return float(x / z)
 
 
 if __name__ == "__main__":

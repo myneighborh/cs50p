@@ -1,11 +1,10 @@
 def main():
     camel_case = input("camelCase: ")
-    snake_case = snake(camel_case)
-    
+    snake_case = convert_to_snake(camel_case)
     print(f"snake_case: {snake_case}")
 
 
-def snake(camel):
+def convert_to_snake(camel):
     result = []
 
     for char in camel:

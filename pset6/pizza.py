@@ -5,9 +5,10 @@ from tabulate import tabulate
 
 
 def main():
-    if len(sys.argv) < 2:
+    length = len(sys.argv)
+    if length < 2:
         sys.exit("Too few command-line arguments")
-    elif len(sys.argv) > 2:
+    elif length > 2:
         sys.exit("Too many command-line arguments")
 
     file_name = sys.argv[1]

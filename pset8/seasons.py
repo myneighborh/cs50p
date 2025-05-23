@@ -6,20 +6,24 @@ import inflect
 
 def main():
     birthday = input("Date of Birth: ")
-    try:
-        birth_date = parse_date(birthday)
-    except ValueError:
-        sys.exit("Invalid date")
-
     today = date.today()
+
+    try:
+        birth_date = parse_date(birthday, today)
+    except ValueError as e:
+        sys.exit(e)
+
     minutes = calculate_minutes(birth_date, today)
     words = convert_to_words(minutes)
     print(f"{words} minutes")
 
 
-def parse_date(birthday):
+def parse_date(birthday, today):
     try:
-        return datetime.strptime(birthday, "%Y-%m-%d").date()
+        birth_date = datetime.strptime(birthday, "%Y-%m-%d").date()
+        if birth_date > today:
+            raise ValueError("Date must be in the past")
+        return birth_date
     except ValueError:
         raise ValueError("Invalid date")
 

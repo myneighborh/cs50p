@@ -7,11 +7,13 @@ def test_hello():
     assert value("  hello there") == 0
     assert value("HELLO!!!") == 0
 
+
 def test_h():
     assert value("hi") == 20
     assert value("Hey there") == 20
     assert value("h") == 20
     assert value("HOLA amigo") == 20
+
 
 def test_else():
     assert value("good morning") == 100

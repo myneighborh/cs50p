@@ -1,31 +1,32 @@
 def main():
-    extension = input("File name: ")
-    print(transform(extension))
+    file_name = input("File name: ")
+    print(extract_extension(file_name))
 
-def transform(extension):
-    extension = extension.strip().lower()
 
-    if '.' in extension:
-        _, ext = extension.rsplit('.', 1)
-        ext = '.' + ext
+def extract_extension(file_name):
+    file_name = file_name.strip().lower()
+
+    if '.' in file_name:
+        extension = file_name.rsplit('.', 1)[-1]
     else:
-        ext = ''
+        extension = ''
 
-    match ext:
-        case ".gif":
+    match extension:
+        case "gif":
             return "image/gif"
-        case ".jpg" | ".jpeg":
+        case "jpg" | "jpeg":
             return "image/jpeg"
-        case ".png":
+        case "png":
             return "image/png"
-        case ".pdf":
+        case "pdf":
             return "application/pdf"
-        case ".txt":
+        case "txt":
             return "text/plain"
-        case ".zip":
+        case "zip":
             return "application/zip"
         case _:
             return "application/octet-stream"
+
 
 if __name__ == "__main__":
     main()

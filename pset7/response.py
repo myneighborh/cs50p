@@ -2,7 +2,6 @@ import validators
 
 
 def main():
-
     email = input("Email: ").strip()
     if is_valid(email):
         print("Valid")

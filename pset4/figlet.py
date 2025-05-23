@@ -1,5 +1,6 @@
 import random
 import sys
+
 from pyfiglet import Figlet
 
 
@@ -8,29 +9,32 @@ FONT_LIST = figlet.getFonts()
 
 
 def main():
-    if len(sys.argv) == 1:
-        random_font()
-    elif len(sys.argv) == 3:
-        convert_font(sys.argv[1], sys.argv[2])
-    else:
-        sys.exit(1)
+    try:
+        if len(sys.argv) == 1:
+            font_name = random_font()
+        elif len(sys.argv) == 3:
+            font_name = selected_font(sys.argv[1], sys.argv[2])
+        else:
+            raise ValueError("Invalid usage")
 
-    text = input("Input: ")
-    print(figlet.renderText(text))
+        text = input("Input: ")
+        figlet.setFont(font=font_name)
+        print(figlet.renderText(text))
+
+    except ValueError:
+        sys.exit("Invalid usage")
 
 
 def random_font():
-    font_name = random.choice(FONT_LIST)
-    figlet.setFont(font=font_name)
+    return random.choice(FONT_LIST)
 
 
-def convert_font(font_command, font_name):
+def selected_font(font_command, font_name):
     if font_command not in ("-f", "--font"):
-        sys.exit(1)
+        raise ValueError("Invalid usage")
     elif font_name not in FONT_LIST:
-        sys.exit(1)
-    else:
-        figlet.setFont(font=font_name)
+        raise ValueError("Invalid usage")
+    return font_name
 
 
 if __name__ == "__main__":

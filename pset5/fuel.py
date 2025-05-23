@@ -15,10 +15,7 @@ def convert(fraction):
         raise ZeroDivisionError
     if numerator > denominator:
         raise ValueError
-
-    percentage = round(numerator / denominator * 100)
-
-    return percentage
+    return round(numerator / denominator * 100)
 
 
 def gauge(percentage):

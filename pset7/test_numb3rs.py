@@ -1,17 +1,25 @@
 from numb3rs import validate
 
 
-def test_valid_ips():
-    assert validate("0.0.0.0") == True
-    assert validate("127.0.0.1") == True
-    assert validate("255.255.255.255") == True
-    assert validate("192.168.1.1") == True
+def main():
+    test_format()
+    test_range()
 
 
-def test_invalid_ips():
-    assert validate("256.255.255.255") == False
-    assert validate("192.168.1") == False
-    assert validate("192.168.1.1.1") == False
-    assert validate("192.168.01.1") == False
-    assert validate("abc.def.ghi.jkl") == False
-    assert validate("") == False
+def test_format():
+    assert validate(r"1.2.3.4")==True
+    assert validate(r"1.2.3")==False
+    assert validate(r"1.2")==False
+    assert validate(r"1")==False
+
+
+def test_range():
+    assert validate(r"255.255.255.255")==True
+    assert validate(r"512.1.1.1")==False
+    assert validate(r"1.512.1.1")==False
+    assert validate(r"1.1.512.1")==False
+    assert validate(r"1.1.1.512")==False
+
+
+if __name__ == "__main__":
+    main()

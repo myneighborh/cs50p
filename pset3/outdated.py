@@ -1,40 +1,38 @@
-MONTHS = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-]
-
 def main():
-    month, day, year = get_input("Date: ")
+    month, day, year = convert_to_iso()
     print(f"{year}-{month:02}-{day:02}")
 
 
-def get_input(prompt):
+def convert_to_iso():
+    month_list = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
+
     while True:
         try:
-            date = input(prompt).strip()
+            date = input("Date: ").strip()
 
             if '/' in date:
                 month, day, year = map(int, date.split('/'))
-
             elif ',' in date:
                 parts = date.split()
                 if len(parts) != 3:
                     raise ValueError
                 month_str = parts[0]
+                month = month_list.index(month_str.capitalize()) + 1
                 day = int(parts[1].strip(','))
                 year = int(parts[2])
-                month = MONTHS.index(month_str.capitalize()) + 1
-
             else:
                 raise ValueError
 

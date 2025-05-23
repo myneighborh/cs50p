@@ -1,14 +1,13 @@
 def main():
     text = input("Input: ")
-    shorten_text = shorten(text)
-    print(f"Output: {shorten_text}")
+    print(f"Output: {shorten(text)}")
 
 
-def shorten(word):
+def shorten(text):
     vowels = "aeiouAEIOU"
     output = []
 
-    for c in word:
+    for c in text:
         if c not in vowels:
             output.append(c)
 

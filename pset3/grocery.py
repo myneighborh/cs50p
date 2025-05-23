@@ -1,5 +1,6 @@
 def main():
     grocery_list = {}
+
     while True:
         try:
             grocery = input().upper()

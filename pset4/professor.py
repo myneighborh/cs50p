@@ -2,16 +2,21 @@ import random
 
 
 def main():
+    # while True:
+    #     try:
+    #         level = get_level()
+    #         break
+    #     except ValueError:
+    #         continue
     level = get_level()
     score = 0
 
+    # Repeat 10 problems
     for _ in range(10):
-        first_num = generate_integer(level)
-        second_num = generate_integer(level)
-        problem = f"{first_num} + {second_num} = "
-        answer = first_num + second_num
+        problem, answer = generate_problem(level)
         tries = 0
 
+        # Allow up to 3 attempts per problem
         while tries < 3:
             try:
                 guess = int(input(problem))
@@ -24,22 +29,29 @@ def main():
             except ValueError:
                 print("EEE")
                 tries += 1
+
+        # Show correct answer if user failed 3 times
         if tries == 3:
             print(f"{problem}{answer}")
 
+    # Print final score
     print(f"Score: {score}")
 
 
 def get_level():
+    # level = int(input("Level: "))
+    # if level in [1, 2, 3]:
+    #     return level
+    # else:
+    #     raise ValueError
+
     while True:
         try:
             level = int(input("Level: "))
             if level in [1, 2, 3]:
                 return level
-            else:
-                raise ValueError
         except ValueError:
-            continue
+            pass
 
 
 def generate_integer(level):
@@ -51,6 +63,14 @@ def generate_integer(level):
         return random.randint(100, 999)
     else:
         raise ValueError
+
+
+def generate_problem(level):
+    x = generate_integer(level)
+    y = generate_integer(level)
+    problem = f"{x} + {y} = "
+    answer = x + y
+    return problem, answer
 
 
 if __name__ == "__main__":
