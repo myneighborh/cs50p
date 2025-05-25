@@ -33,5 +33,5 @@ Each folder represents a weekly problem set aligned with the course topics.
 - [**pset8 – Object-Oriented Programming**](./pset8/)  
   ↳ *tuple. Classes. class. Objects. Attributes. Instance Variables. Methods. Instance Methods. \_\_init\_\_. raise. \_\_str\_\_. Properties. @property. Decorators. int. str. str.lower. str.strip. list. list.append. dict. Class Methods. @classmethod. Static Methods. @staticmethod. Inheritance. BaseException. Operator Overloading. object.\_\_add\_\_.*
 
-- [**pset9 – Et Cetera**](./pset9/)  
+- [**pset9(Final Project) – Et Cetera**](./pset9/)  
   ↳ *docs.python.org. set. global. Constants. Type Hints. mypy. Docstrings. peps.python.org. argparse. Unpacking. \*args. \*\*kwargs. print. map. List Comprehensions. filter. Dictionary Comprehensions. enumerate. Generators. yield. Iterators.*
