@@ -13,7 +13,3 @@ As the game progresses, the number and speed of falling stars increase, creating
 - `player.py`: Defines the `Player` class. The player’s position is updated based on arrow key input, and it handles collision checks with stars.
 - `soundmanager.py`: Manages all sound effects in the game, including collision sounds and optional background music.
 - `test_project.py`: A Pytest-based test file to validate basic functionalities such as player movement limits, star generation boundaries, and object initialization.
-
-#### What I Learned:
-Through this project, I learned how to use `pygame` to handle game loops, user input, collision detection, sound playback, and screen rendering. I also gained experience with object-oriented design in Python, file modularization, and basic game architecture principles.
-Most importantly, I learned how to take a simple game idea and implement it step by step, testing and refining it into a playable experience. I’m truly grateful for this opportunity to build something fun and creative while learning practical programming skills.
