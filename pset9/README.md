@@ -8,8 +8,8 @@ As the game progresses, the number and speed of falling stars increase, creating
 
 ### Package Structure and Functionality:
 - `project.py`: This is the main file where the game is implemented. It contains all the logic for initializing the game window, rendering objects (player, stars), handling keyboard input, collision detection, score/life tracking, and restarting the game.
-- `constants.py`: Stores game-wide constants such as screen size, color values, font sizes, and movement speed settings to keep the code modular and easier to maintain.
-- `star.py`: Contains the `Star` class, which defines how each star behaves, how it moves, and how it is rendered. Stars are spawned at random positions and fall downward with increasing speed as time goes on.
-- `player.py`: Defines the `Player` class. The player’s position is updated based on arrow key input, and it handles collision checks with stars.
-- `soundmanager.py`: Manages all sound effects in the game, including collision sounds and optional background music.
 - `test_project.py`: A Pytest-based test file to validate basic functionalities such as player movement limits, star generation boundaries, and object initialization.
+- `config.py`: Stores game-wide configs such as screen size, color values, font sizes, and movement speed settings to keep the code modular and easier to maintain.
+- `player.py`: Defines the `Player` class. The player’s position is updated based on arrow key input, and it handles collision checks with stars.
+- `sound.py`: Manages all sound effects in the game, including collision sounds and optional background music.
+- `star.py`: Contains the `Star` class, which defines how each star behaves, how it moves, and how it is rendered. Stars are spawned at random positions and fall downward with increasing speed as time goes on
