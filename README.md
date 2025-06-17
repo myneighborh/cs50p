@@ -1,6 +1,4 @@
 # CS50P
-![CS50P](https://github.com/user-attachments/assets/9e92eb4b-3afa-4dfe-be33-330fd6e4da8e)
-
 This repository contains my solutions to Harvard's CS50P course.  
 Each folder represents a weekly problem set aligned with the course topics.
 
@@ -35,3 +33,6 @@ Each folder represents a weekly problem set aligned with the course topics.
 
 - [**pset9 – Et Cetera**](./pset9/)  
   ↳ *docs.python.org. set. global. Constants. Type Hints. mypy. Docstrings. peps.python.org. argparse. Unpacking. \*args. \*\*kwargs. print. map. List Comprehensions. filter. Dictionary Comprehensions. enumerate. Generators. yield. Iterators. Final Project.*
+
+## Certificate
+![CS50P](https://github.com/user-attachments/assets/9e92eb4b-3afa-4dfe-be33-330fd6e4da8e)
