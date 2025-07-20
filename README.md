@@ -1,6 +1,6 @@
 # CS50P
-This repository contains my solutions to Harvard's CS50P course.  
-Each folder represents a weekly problem set aligned with the course topics.
+This repository includes my solutions to Harvard's CS50P (Introduction to Programming with Python).   
+Each directory corresponds to a weekly problem set following the course structure.
 
 ## Problem Sets
 
