@@ -2,7 +2,7 @@
 
 ### Video Demo: https://youtu.be/Q5DZOs_EexY?si=0zLqP3Suvm-nBZ4h
 ### Description:
-**A Billion Stars Falling From the Sky** is a simple but engaging survival game developed using Python and the `pygame` library. In this game, the player controls a character that must dodge stars falling randomly from all directions. The gameplay is time-based, and the objective is to survive as long as possible while avoiding collisions with stars.
+**A Billion Stars Falling From the Sky** is a simple survival game developed using Python and the `pygame` library. In this game, the player controls a character that must dodge stars falling randomly from all directions. The gameplay is time-based, and the objective is to survive as long as possible while avoiding collisions with stars.
 The game begins when the player presses the **'S' key**, and stars begin to fall immediately. The player can control the character using the **arrow keys (← ↑ → ↓)**. When a star collides with the player, it disappears, a sound effect is played, and one life is lost. The number of remaining lives is displayed on the screen, along with the player's current survival time.
 As the game progresses, the number and speed of falling stars increase, creating a more intense and challenging environment. When the player's lives reach zero, the game ends and a result screen is displayed. The player can press the **'R' key** to restart the game and try again.
 
